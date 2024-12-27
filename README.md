@@ -1,8 +1,8 @@
-# diagport toolkit (dtk)
+# diagport toolkit
 
 The **diagport toolkit** (dtk) Windows application is a tool communicating with Qualcomm-based smartphones and CPE modems, allowing to capture raw 2G/3G/4G/5G radio frames. The tool uses the Qualcomm diagnostic protocol, also called QCDM (Qualcomm Diagnostic Monitor) to communicate with the device. It allows us to generate packets captures in PCAP file format using either an Android smartphone or a modem.
 
-Additionally, it is capable of decoding 5G frames and create decoded PCAPNG files can be used and interpreted by any network protocol analyzer application which handles this type of file format.
+Additionally, it is capable of decoding proprietary 5G frames and create decoded PCAPNG files can be used and interpreted by any network protocol analyzer application which handles this type of file format.
 
 ### Prerequisites
 
@@ -19,11 +19,11 @@ Fulfilling these requirements is the responsibility of the end user.
 
 ## File Converter
 
-In order to use the **File Converter** tool, click on the `Open` button, select a PCAP file with proprietary 5G frames to convert, and click on the `Convert` button.
+In order to use the **File Converter** tool, click on the `Open` button, select a file with a supported file type to convert, and click on the `Convert` button.
 
-Once the conversion completed, a new PCAPNG file is generated with the same name as the source file with an additional *_decoded* string, stored in the same folder as the source file, contains the decoded 5G frames along with all the other packets, and a popup message is shown. The number of successfully decoded packets is also mentioned.
+Once the conversion completed, a new PCAPNG file is generated with the same name as the source file with an additional *_decoded* string, stored in the same folder as the source file, contains the decoded 5G frames along with other packets, and a popup message is shown. The number of successfully decoded packets is also mentioned.
 
-In case the source file has the 5G frames on a different UDP port (not the default 49999 used by the application), add that port to the input field before conversion to identify the proprietary packets.
+In case the source file is a PCAP file and it has the 5G frames on a different UDP port (not the default 49999 used by the application), add that port to the input field before conversion to identify the proprietary packets.
 
 **Note**, only one application can communicate with the device’s Diag port at the same time.
 
@@ -65,12 +65,15 @@ The License frame shows the
 - Unique Service ID.
 - The remaining days of the current license.
 - The Serial Key via the placeholder text of an entry field.
+- General Settings.
 
 The *Copy Service ID* button copies the service ID to the clipboard.
 
 The *Set License* button stores a license provided in the entry field.
 
 The *Remove License* button deletes the earlier stored license.
+
+The *Check for Updates* button is used for checking for new software version.
 
 Additionally, the *Collect Logs* button is used for collecting history logs of the application executions.
 
